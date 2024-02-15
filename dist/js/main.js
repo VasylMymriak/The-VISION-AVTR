@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function() {
   $('.design-slider').slick({
     dots: false,
     slidesToShow: 4,
