@@ -27,9 +27,11 @@ button {
   padding: 0;
   margin-right: 175px;
   cursor: pointer;
+  outline: none;
 }
-ul {
+ul,li,ol {
   list-style: none;
+  list-style-type: none;
 }
 
 .container {
@@ -40,16 +42,19 @@ ul {
 }
 .header {
   background: #070A1B;
-
 }
-
-
 
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: center ;
+  background-color: #070A1B;
   height: 100px;
+  position: relative;
+  z-index: 2;
+}
+.logo{
+  pointer-events: none;
 }
 .list {
   display: flex
@@ -68,8 +73,55 @@ ul {
   border-radius: 50%;
   transition: background .4s;
 }
-.list__link:hover {
+
+.list__link:hover,
+.hamburger:hover{
   background-color: #C1A1D2;
+}
+
+.menu__list{
+  display:flex;
+  transform: translateY(-100%);
+  position: absolute;
+  justify-content: space-around;
+  align-items: end;
+  background-color: #070a1b;
+  width: -webkit-fill-available;
+  gap: auto;
+  padding: 10px;
+  height: 100px;
+  margin: -40px 0 0px 0px;
+  border-radius: 23px;
+  max-width: 1200px;
+  z-index: 0;
+  transition: all 1s;
+}
+.menu__list.active{
+    transform: translateY(0);
+    z-index: 1;
+}  
+
+.menu__list.active a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 40px;
+    flex-direction: row;
+    border-radius: 50%;
+    transition: background .4s;
+}
+.menu__list .list__item,
+.menu__list.active .list__item {
+  margin-left: 0;
+}
+.menu__list .list__link{
+  font-size: 20px;
+}
+.menu__list .list__link:hover{
+  background-color: #070a1b;
+  font-size: 140%;
+  text-shadow: 0 0 5px #C1A1D2, 0 0 10px #C1A1D2, 0 0 20px #C1A1D2;
 }
 .header__content {
   background-image: url(../images/avtr-1.png);
