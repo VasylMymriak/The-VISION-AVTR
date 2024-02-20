@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hamburgers.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
@@ -21,30 +22,46 @@
   <header class="header">
     <div class="container">
       <div class="header__top">
-        <button class="header__nav wow fadeInLeft">
-          <img class="header__nav-img" src="images/menu-btn.svg" alt="menu button">
+        <button class="hamburger hamburger--spin wow fadeInLeft" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
         </button>
         <a href="#" class="logo">
           <img src="images/logo.svg" alt="logo" class="logo__img wow fadeIn">
         </a>
         <ul class="list wow fadeInRight">
           <li class="list__item">
-            <a href="#" class="list__link">
-              <img src="images/Twitter.svg" alt="" class="list__img">
+            <a href="https://twitter.com/MercedesBenz/status/1289803173712891906" class="list__link">
+              <img src="images/Twitter.svg" alt="Twitter" class="list__img">
             </a>
           </li>
           <li class="list__item">
-            <a href="#" class="list__link">
-              <img src="images/Google.svg" alt="" class="list__img">
+            <a href="https://mercedes-benz-kiev.com/noviy-mercedes-benz-vision-avtr-1380" class="list__link">
+              <img src="images/Google.svg" alt="Google" class="list__img">
             </a>
           </li>
           <li class="list__item">
-            <a href="#" class="list__link">
-              <img src="images/Facebook.svg" alt="" class="list__img">
+            <a href="https://www.facebook.com/SandownMercedesBenz/posts/the-vision-avtr-taking-inspiration-from-avatar-the-way-of-water-in-cinemas-today/2262547333949811/" class="list__link">
+              <img src="images/Facebook.svg" alt="Facebook" class="list__img">
             </a>
           </li>
         </ul>
       </div>
+      <ul class="menu__list" id="menu">
+        <li class="list__item">
+          <a href="#concept" class="list__link">CONCEPT</a>
+        </li>
+        <li class="list__item">
+          <a href="#premier" class="list__link">PREMIER</a>
+        </li>
+        <li class="list__item">
+          <a href="#design" class="list__link">INTERIOR</a>
+        </li>
+        <li class="list__item">
+          <a href="#slider" class="list__link">GALLARY</a>
+        </li>
+      </ul>
     </div>
     <div class="header__content animated fadeIn">
       <h1 class="title wow animate fadeIn" data-wow-delay="1s">
@@ -56,7 +73,7 @@
     </div>
   </header>
 
-  <section class="concept">
+  <section class="concept" id="concept">
     <div class="container">
       <div class="concept__inner">
         <h3 class="section__title wow animate slideInLeft">
@@ -70,11 +87,11 @@
     </div>
   </section>
 
-  <section class="premier">
+  <section class="premier" id="premier">
     <div class="container">
       <div class="premier__inner">
         <div class="premier__column">
-          <h3 class="section__title wow animate slideInRight">PREMIER</h3>
+          <h3 class="section__title wow animate fadeIn">PREMIER</h3>
           <p class="premier_info wow animate fadeInDown"data-wow-delay="0.8s">
             At the CES 2020 exhibition, a new conceptual Mercedes-Benz – VISION AVTR was presented. The futuristic
             concept of the presented electric car uniquely combines humans, nature, and the automobile.</p>
@@ -86,8 +103,9 @@
             for the creation of VISION AVTR
           </p>
           <img src="images/prem_1.jpg" alt="" class="premier__img wow animate fadeIn" data-wow-delay="1s">
-          <button class="premier__btn wow animate fadeIn"data-wow-delay="1.2s">MORE</button>
-        </div>
+          <a href="https://www.mercedes-benz.com/en/innovation/concept-cars/vision-avtr/" target="_blank">
+            <button class="premier__btn wow animate fadeIn" data-wow-delay="1.2s">MORE</button>
+        </a>        </div>
         <div class="premier__column">
           <img src="images/prem_2.png" alt="" class="premier__img  wow animate fadeIn"data-wow-delay="1.3s">
           <p class="premier_info wow animate fadeInDown"data-wow-delay="1.4s">
@@ -114,8 +132,7 @@
   <section class="design">
     <div class="container">
       <div class="design__interior">
-
-        <div class="design__cell-one">
+        <div class="design__cell-one" id="design">
           <h3 class="section__title wow animate fadeInDown ">
             INTERIOR & EXTERIOR
           </h3>
@@ -146,7 +163,7 @@
         </div>
       </div>
     </div>
-    <div class="design-slider wow animate fadeInDown"data-wow-delay="0.5s">
+    <div class="design-slider wow animate fadeInDown"data-wow-delay="0.5s" id="slider">
       <img src="images/slider-1.jpg" alt="" class="slider__item">
       <img src="images/slider-2.jpg" alt="" class="slider__item">
       <img src="images/slider-3.jpg" alt="" class="slider__item">
@@ -185,17 +202,17 @@
         </a>
         <ul class="list wow fadeInRight">
           <li class="footer__item">
-            <a href="#" class="list__link">
+            <a href="https://twitter.com/MercedesBenz/status/1289803173712891906" class="list__link">
               <img src="images/Twitter.svg" alt="" class="list__img">
             </a>
           </li>
           <li class="footer__item">
-            <a href="#" class="list__link">
+            <a href="https://mercedes-benz-kiev.com/noviy-mercedes-benz-vision-avtr-1380" class="list__link">
               <img src="images/Google.svg" alt="" class="list__img">
             </a>
           </li>
           <li class="footer__item">
-            <a href="#" class="list__link">
+            <a href="https://www.facebook.com/SandownMercedesBenz/posts/the-vision-avtr-taking-inspiration-from-avatar-the-way-of-water-in-cinemas-today/2262547333949811/" class="list__link">
               <img src="images/Facebook.svg" alt="" class="list__img">
             </a>
           </li>

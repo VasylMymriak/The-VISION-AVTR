@@ -40,3 +40,26 @@ let wow = new WOW(
   }
 );
 wow.init();
+
+let hamburger = document.querySelector('.hamburger');
+var menu = document.querySelector('.menu__list');
+
+if (hamburger) {
+  hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('is-active');
+    menu.classList.toggle('active');
+  });
+}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+      const offset = target.offsetTop - (window.innerHeight / 2 - target.clientHeight / 2);
+
+      window.scrollTo({
+          top: offset,
+          behavior: 'smooth'
+      });
+  });
+});
