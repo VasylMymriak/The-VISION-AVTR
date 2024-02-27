@@ -105,7 +105,7 @@ ul,li,ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 64px;
+    width: 80px;
     height: 40px;
     flex-direction: row;
     border-radius: 50%;
@@ -157,6 +157,7 @@ ul,li,ol {
 .header__content::before {
   content:"";
   background-image: url(../images/logo_1.svg);
+  background-size: cover;
   position: absolute;
   width: 50px;
   height: 50px;
@@ -250,6 +251,8 @@ ul,li,ol {
 }
 .premier__img {
   margin-bottom: 20px;
+  width: 100%;
+  height: auto;
 }
 .premier__btn {
   font-family: 'Corporate A';
@@ -315,12 +318,20 @@ ul,li,ol {
 .design__cell-one {
   grid-row: 1/3;
 }
-.design__cell-two {
+.design__cell-two{
+  grid-column: 2/5;
+}
+.design__img{
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+}
+.design__cell-three {
   grid-row-end: -1;
   margin-top: auto;
   align-items: flex-end;
 }
-.design__cell-three {
+.design__cell-four {
   grid-column-end: -1;
   grid-row-end: -1;
   display: flex;
