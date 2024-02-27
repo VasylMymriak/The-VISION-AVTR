@@ -256,7 +256,7 @@
     }
 
     .header__content {
-        min-height: calc(30vh - 100px);
+        min-height: calc(31vh - 38px);
     }
 
     .title {
